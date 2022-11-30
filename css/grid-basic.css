@@ -1,0 +1,44 @@
+.grid-container{
+  min-width:320px;
+  margin-right: auto;
+  margin-left: auto;
+  border-style:solid;
+  display:grid;
+  grid-template-areas:
+  "header header header header"
+  "left content content right"
+  "footer footer footer footer";
+}
+.header{
+  margin:8px;
+  border-style:dotted;
+  grid-area:header;
+}
+.left{
+  margin:8px;
+  border-style:dotted;
+  grid-area:left;
+}
+.right{
+  margin:8px;
+  border-style:dotted;
+  grid-area:right;
+}
+.content{
+  margin:8px;
+  border-style:dotted;
+  grid-area:content;
+}
+.footer{
+  margin:8px;
+  border-style:dotted;
+  grid-area:footer;
+}
+
+.grid-item{
+    background-color:white; /* 기본 배경색 */
+}
+
+.grid-item:nth-child(2n){
+    background-color:gray;
+}

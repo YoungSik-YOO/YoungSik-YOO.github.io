@@ -1,0 +1,26 @@
+<html>
+<head>
+    <style>
+        .container{
+          border:1px solid black;
+          display:inline-block;
+          margin:20px;
+        }
+        .box{
+          width:100px;
+          height:100px;
+          background-color:red;
+        }
+        .box:hover{ 
+          transform:rotate(330deg);
+          /* 오른쪽으로 회전 */
+          transform-origin:top right;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="container">
+        <div class="box"></div>
+      </div>
+    </body>
+    </html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create Node</title>
+</head>
+<body>
+    <p>text 1</p>
+    <a href="https://www.gilbut.co.kr">길벗</a>
+    <a href="https://www.sucoding.kr">수코딩</a>
+    <script>
+        const childNodes = document.body.childNodes; 
+        childNodes.forEach((node) => {
+        if(node.nodeName === "A") 
+            node.parentNode.removeChild(node);
+        })
+    </script>
+</body>
+</html>

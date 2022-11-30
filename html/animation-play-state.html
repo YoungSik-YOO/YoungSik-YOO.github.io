@@ -1,0 +1,38 @@
+<html>
+<head>
+<style>
+    div{
+      width:100px;
+      height:100px;
+      background-color:red;
+      position:relative;
+      animation-name:move;
+      animation-duration:10s;
+      animation-fill-mode:forwards;
+      animation-play-state:paused;
+    }
+    @keyframes move{
+      from{
+        left:0;
+      }
+      to{
+        left:300px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div></div>
+  <button id="start">start</button>
+  <button id="paused">paused</button>
+  <script>
+    const box = document.querySelector("div");
+    document.getElementById("start").addEventListener("click", function(){
+      box.style.animationPlayState = "running";
+    });
+    document.getElementById("paused").addEventListener("click", function(){
+      box.style.animationPlayState = "paused";
+    })
+  </script>
+</body>
+</html>

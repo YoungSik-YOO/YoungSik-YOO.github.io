@@ -1,0 +1,8 @@
+<button data-cnt="10">가방 구매</button>
+<button data-cnt="0">신발 구매</button>
+<script>
+  const buttonEls = document.querySelectorAll("button");
+  buttonEls.forEach((el) => {
+    console.log(el.dataset.cnt);
+  })
+</script>
