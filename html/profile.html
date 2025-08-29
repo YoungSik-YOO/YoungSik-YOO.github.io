@@ -1,109 +1,101 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html>
 <head>
-  <title>프로필</title>
+  <meta charset="UTF-8">
+  <title>프로필 - 유쌤의 IT Lab</title>
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-  <header>
-    <div>
-        <img src="../img/logo.png" width="50" height="50">
-        <font size="8">유쌤의 홈페이지</font>
+  <!-- Header -->
+  <div class="header">
+    <a class="title" href="../index.html">&#x1F4BB; 유쌤의 IT Lab</a>
+    <div class="nav">
+        <ul class="menu">
+            <li><a href="../index.html">홈</a></li>
+            <li><a href="./login.html">로그인</a></li>
+            <li><a href="./join.html">회원가입</a></li>
+            <li><a href="./profile.html" class="active">프로필</a></li>
+            <li><a href="./portfolio.html">포트폴리오</a></li>
+            <li><a href="./board.html">자유게시판</a></li>
+        </ul>
     </div>
-    <nav>
-        <a href="../index.html">홈</a> | 
-        <a href="../html/login.html">로그인</a> | 
-        <a href="../html/join.html">회원가입</a> | 
-        <a href="../html/profile.html">프로필</a>
-    </nav>
-    </header>
-    <br><br><br>
-    <table>
-        <caption><h1 id="title">유쌤의 프로필</h1></caption>
-        <tr>
-            <td rowspan="4"><img src="../img/profile.jpg" width="100" height="100"></td>
-            <td>이름 : 유영식</td>
-        </tr>
-        <tr>
-            <td>전화번호 : 010-8339-4579</td>
-        </tr>
-        <tr>
-            <td>이메일 : youngsys@gmail.com</td>
-        </tr>
-        <tr>
-            <td>홈페이지 : www.edwith.org/IT-Basic</td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                <p><h3>자기소개</h3></p>
-                <p class="green">안녕하세요. 유쌤(유영식) 입니다.</p>
-                <p class="green">저는 아이티스쿨정보보호교육원에서 자바 웹 프로그래밍 과정 강사를 하고 있습니다.</p>
-                <p class="red">앞으로 여러분들과 재미있는 강의를 진행하려고 합니다.</p>
-                <p class="blue">잘 부탁 드립니다.</p>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                <p><h3>학력소개</h3></p>
-                <p class="BnW_Picture">1997 계룡공업고등학교 전자과 졸업</p>
-                <p class="Dokdo">2004 대전대학교 컴퓨터공학 전공 학사 학위 취득</p>
-                <p class="Nanum">2023 충남대학교 교육대학원 소프트웨어융합교육 전공 석사 학위 취득 예정</p>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                <h3>경력소개</h3>
-            </td>
-        </tr>
-        <tr>
-            <td>1996~1999</td>
-            <td>
-                <p>PC통신 나우누리 온라인 인포샵 운영</p>
-                <p>온라인 머드(MUD:Multi User Document)게임 '용의전설' 운영 관리</p>
-                <p>홈페이지 제작</p>
-            </td>
-        </tr>
-        <tr>
-            <td>2005~2006</td>
-            <td>
-                <p>일본 NTT DoCoMo 차기 Mobils(요금관리) 시스템 개발</p>
-                <p>개발분야 : 요금계산 / 고객관리 / 청구관리 등</p>
-            </td>
-        </tr>
-        <tr>
-            <td>2006~2007</td>
-            <td>
-                <p>특허 관리 스스템 개발</p>
-                <p>한국타이어 / 금호타이어 / ETRI / 연세대 / 포항공대 / 경북대 등</p>
-            </td>
-        </tr>
-        <tr>
-            <td>2007~2012</td>
-            <td>
-                <p>일본 NTT DoCoMo DWH(Data Ware House) 시스템 개발</p>
-                <p>오라클 DB 데어터 분석, 검색 성능 향상 등</p>
-                <br>
-                <p>일본 EMOBILE 신요금관리 시스템 개발</p>
-                <p>통신요금 계산, 청구 데이터 작성, DB 성능 향상 등</p>
-                <br>
-                <p>일본 JR 동일본 설비지령 시스템 개발</p>
-                <p>감시제어, 통신, 배전, 저널 등</p>
-            </td>
-        </tr>
-        <tr>
-            <td>2018~2022</td>
-            <td>
-                <p>일본 IT 취업과정 연수생 상담/관리/과정운영</p>
-                <p>정보처리, 임베디드, C언어, 데이터베이스, JAVA 강의</p>
-                <p>IT 일본어, 일본 취업 특강, 스킬시트, 포트폴리오 작성 강의</p>
-                <p>연수원 시설/장비 관리</p>
-            </td>
-        </tr>
-    </table>
-    <br><br><br>
-    <footer>
-        유쌤의 홈페이지. Copyright. 2022. Yoo.<br>
-        <img src="../img/aaa.png">
-    </footer>
+  </div>
+  <div class="main">
+      <div class="aside"></div>
+      <div class="contents">
+          <div class="profile-container">
+              <!-- Profile Summary -->
+              <div class="profile-summary">
+                  <div class="profile-info">
+                      <h1>유쌤 | IT 교육 전문가</h1>
+                      <p>20년 이상 개발·교육 경험과 일본·필리핀 해외 경력. Java, Python, AI/데이터, AWS/DevOps, IoT까지 실무-교육 전 과정을 설계하고 이끕니다.</p>
+                  </div>
+              </div>
+
+              <!-- About Section -->
+              <div class="profile-section">
+                  <h2>소개</h2>
+                  <p>소프트웨어 개발과 교육 분야에서 축적된 실무 경험을 바탕으로, 학습자의 수준과 목표에 맞는 실습형 커리큘럼을 설계·운영합니다. 해외 근무·창업 경험을 통해 다양한 문화권과 협업했으며, 복잡한 문제를 구조화하여 해결하는 데 강점을 지니고 있습니다.</p>
+              </div>
+
+              <!-- Skills Section -->
+              <div class="profile-section">
+                  <h2>핵심 역량</h2>
+                  <div class="skill-grid">
+                      <div class="skill-item">💻 Java / Spring Boot</div>
+                      <div class="skill-item">🧠 Python / AI·Data (TensorFlow, pandas)</div>
+                      <div class="skill-item">🧩 JavaScript / React</div>
+                      <div class="skill-item">🗄️ DB (MySQL, Oracle)</div>
+                      <div class="skill-item">☁️ 클라우드 / DevOps (AWS)</div>
+                      <div class="skill-item">🔧 IoT (Arduino, Raspberry Pi)</div>
+                      <div class="skill-item">📊 데이터 시각화</div>
+                      <div class="skill-item">📚 교육 설계·운영</div>
+                      <div class="skill-item">🌍 일본어(N1)·영어</div>
+                  </div>
+              </div>
+
+              <!-- Experience Section -->
+              <div class="profile-section">
+                  <h2>주요 경력</h2>
+                  <div class="experience-list">
+                      <div class="exp-item">
+                          <h3>코리아아이티아카데미 · 교육 프리랜서 <span>2023.12 ~ 현재</span></h3>
+                          <ul>
+                              <li>AWS·DevOps 기반 바이오헬스 서비스 개발 과정 강의</li>
+                              <li>Kaggle/국가연구데이터셋 기반 데이터 분석·시각화 플랫폼 강의</li>
+                              <li>데이터사이언스(AI) 웹서비스 융합, ChatGPT·R·Python·JAVA 기초 강의</li>
+                          </ul>
+                      </div>
+                      <div class="exp-item">
+                          <h3>효성컴퓨터학원 · 교육 사원 팀장 <span>2023.03 ~ 2023.10</span></h3>
+                          <ul>
+                              <li>C/C++, Java, Python, 아두이노, AI, 데이터분석 강의</li>
+                              <li>PC정비사·리눅스마스터·네트워크관리사·AICE 자격 과정</li>
+                              <li>마케팅·과정개발·행정 운영</li>
+                          </ul>
+                      </div>
+                      <div class="exp-item">
+                          <h3>제이에스엘인재개발원 · 교육부 대리 <span>2018.10 ~ 2022.03</span></h3>
+                          <ul>
+                              <li>과정평가형 정보처리산업기사 운영·강의, 일본 취업 특강</li>
+                              <li>C/C++, Java, Oracle DB, 라즈베리파이(IoT) 강의</li>
+                          </ul>
+                      </div>
+                      <div class="exp-item">
+                          <h3>일본 테크에이브 · 개발 과장(팀장) <span>2007.07 ~ 2012.05</span></h3>
+                          <ul>
+                              <li>NTT DoCoMo DWH, EMOBILE 요금, JR동일본 설비지령 등 대규모 시스템 개발·운영</li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        
+      </div>
+        <div class="aside"></div>
+  </div>
+  <div class="footer">
+      <p>Copyright&copy; 유쌤의 IT 연구소(Yoo's IT Lab). All rights reserved.</p>
+  </div>
 </body>
 </html>

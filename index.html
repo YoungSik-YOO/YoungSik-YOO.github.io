@@ -1,39 +1,64 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html>
     <head>
-        <title>환영합니다.</title>
+        <meta charset="UTF-8">
+        <title>웹 페이지 작성 실습</title>
         <link rel="stylesheet" href="./css/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="./js/script.js"></script>
     </head>
-    <body class="grid-container">
-        <header class="header">
-            <img src="./img/logo_nonbg.png">
-            <p id="title">유쌤의 IT 교실</p>
-        </header>
-        <script>
-            
-        </script>
-        <nav class="nav">
-            <div class="menu">
-                <a href="./index.html">홈</a> | 
-                <a href="./html/login.html">로그인</a> | 
-                <a href="./html/join.html">회원가입</a> | 
-                <a href="./html/profile.html">프로필</a>
+    <body>
+        <div class="header">
+            <a class="title" href="./index.html">&#x1F4BB; 유쌤의 IT Lab</a>
+            <div class="nav">
+                <ul class="menu">
+                    <li><a href="./index.html">홈</a></li>
+                    <li><a href="./html/login.html">로그인</a></li>
+                    <li><a href="./html/join.html">회원가입</a></li>
+                    <li><a href="./html/profile.html">프로필</a></li>
+                    <li><a href="./html/portfolio.html">포트폴리오</a></li>
+                    <li><a href="./html/board.html">자유게시판</a></li>
+                </ul>
             </div>
-        </nav>
-        <div class="left"></div>
-        <div class="content">
-        <img class="banner" src="./img/banner.gif">
         </div>
-        <div class="right"></div>
-        <footer class="footer">
-            <img src="./img/aaa_nobg.png" />
-            <div>
-                <a href="#">사이트맵</a> | 
-                <a href="#">이용약관</a> | 
-                <a href="#">개인정보처리방침</a> | 
-                <a href="#">고객센터</a> &nbsp;&nbsp;&nbsp;&nbsp;
-                <strong>유쌤의 IT 교실. &copy; 2022. Yoo SSam.</strong>
+        <div class="main">
+            <div class="aside-left"></div>
+            <div class="contents">
+                <div>
+                    <h2>유쌤의 IT Lab에 오신 것을 환영합니다!</h2>
+                    <p>이곳은 IT 기술, 프로그래밍, 웹 개발 등 다양한 지식을 공유하고 함께 성장하는 공간입니다. <br>
+                    최신 IT 트렌드부터 실용적인 코딩 팁까지, 유익한 정보들을 만나보세요.</p>
+                    <hr>
+                    <h3>최신 글</h3>
+                    <div class="article-item">
+                        <h4><a href="#">HTML 기본 다지기</a></h4>
+                        <p>웹 개발의 첫걸음, HTML의 핵심 개념과 태그 사용법을 알아봅니다.</p>
+                    </div>
+                    <div class="article-item">
+                        <h4><a href="#">CSS로 웹 페이지 꾸미기</a></h4>
+                        <p>CSS를 이용하여 웹 페이지의 디자인을 더욱 풍부하고 매력적으로 만드는 방법을 소개합니다.</p>
+                    </div>
+                </div>
             </div>
-        </footer>
+            <div class="aside-right">
+                <h3>오늘 할일</h3>
+                <div id="todolist">
+                    <input type="text" id="taskInput" placeholder="할일을 입력하세요." onkeydown="inputKey(event)">
+                    <input type="button" id="addTask" value="추가" onclick="addTask()">
+                    <input type="button" id="addTask" value="삭제" onclick="delCheckList()">
+                    <table>
+                        <tr>
+                            <th id="h-num">번호</th>
+                            <th id="h-todo">할일</th>
+                            <th id="h-check"><input type="checkbox" onclick="allCheck(this)"></th>
+                        </tr>
+                        <!-- 여기로 할일 추가 -->
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p>Copyright&copy; 유쌤의 IT 연구소(Yoo's IT Lab). All rights reserved.</p>
+        </div>
     </body>
 </html>

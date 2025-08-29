@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="ko" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>유쌤 | IT 교육 · 풀스택 · 데이터</title>
+  <meta name="description" content="IT 교육 전문가 · 풀스택 개발자 · 데이터 분석가 | Java · Python · React · Spring Boot · AWS" />
+  <meta property="og:title" content="유쌤 | IT 교육 · 풀스택 · 데이터" />
+  <meta property="og:description" content="IT 교육 전문가 · 풀스택 개발자 · 데이터 분석가" />
+  <meta property="og:type" content="website" />
+  <meta name="color-scheme" content="light dark" />
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Tailwind config (optional radius/typography tweaks)
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ["Pretendard Variable", "system-ui", "-apple-system", "Segoe UI", "Roboto", "Noto Sans KR", "Apple SD Gothic Neo", "sans-serif"] },
+          boxShadow: { soft: "0 10px 30px -12px rgba(0,0,0,0.25)" },
+          container: { center: true, padding: "1rem" }
+        }
+      }
+    }
+  </script>
+  <!-- Pretendard (optional) -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+  <style>
+    /* Smooth gradient blobs */
+    .blob { filter: blur(40px); opacity: .35; }
+    /* Print friendly */
+    @media print { .no-print { display: none !important; } .card { box-shadow: none !important; border: 1px solid #e5e7eb } }
+  </style>
+  <script>
+    // Dark mode persistence
+    const themeStorageKey = 'theme:dark';
+    const setThemeClass = (on) => document.documentElement.classList.toggle('dark', on);
+    const saved = localStorage.getItem(themeStorageKey);
+    setThemeClass(saved === 'true');
+    function toggleTheme(){
+      const on = !document.documentElement.classList.contains('dark');
+      setThemeClass(on); localStorage.setItem(themeStorageKey, on);
+    }
+  </script>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-zinc-50 to-white dark:from-zinc-950 dark:to-zinc-900 text-zinc-800 dark:text-zinc-100">
+  <!-- Header -->
+  <header class="sticky top-0 z-40 border-b border-zinc-200/60 dark:border-zinc-800/80 backdrop-blur bg-white/60 dark:bg-zinc-950/50">
+    <div class="container max-w-6xl flex items-center justify-between py-3">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-indigo-400 to-cyan-400"></div>
+        <span class="font-semibold">유쌤</span>
+      </div>
+      <nav class="hidden md:flex items-center gap-6 text-sm opacity-90">
+        <a href="#about" class="hover:opacity-100">소개</a>
+        <a href="#skills" class="hover:opacity-100">역량</a>
+        <a href="#experience" class="hover:opacity-100">경력</a>
+        <a href="#projects" class="hover:opacity-100">프로젝트</a>
+        <a href="#swot" class="hover:opacity-100">SWOT</a>
+        <a href="#contact" class="hover:opacity-100">연락처</a>
+      </nav>
+      <div class="flex items-center gap-2 no-print">
+        <a id="resumeLink" href="#" class="px-3 py-2 rounded-xl border border-zinc-300 dark:border-zinc-700 text-xs hover:bg-zinc-100 dark:hover:bg-zinc-800 transition" download>
+          <svg class="inline w-4 h-4 mr-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          이력서
+        </a>
+        <button onclick="toggleTheme()" class="px-3 py-2 rounded-xl text-xs border border-zinc-300 dark:border-zinc-700">테마</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 -z-10">
+      <div class="blob absolute -top-40 -right-40 w-[40rem] h-[40rem] rounded-full bg-gradient-to-br from-indigo-500 via-sky-500 to-cyan-400"></div>
+      <div class="blob absolute -bottom-40 -left-40 w-[36rem] h-[36rem] rounded-full bg-gradient-to-tr from-indigo-500 via-sky-500 to-cyan-400"></div>
+    </div>
+    <div class="container max-w-6xl py-16 md:py-24">
+      <div class="p-6 md:p-10 rounded-3xl shadow-soft border border-white/40 dark:border-zinc-700/50 bg-white/70 dark:bg-zinc-900/60">
+        <div class="flex flex-col md:flex-row items-center gap-8">
+          <div class="w-28 h-28 md:w-36 md:h-36 rounded-2xl bg-gradient-to-br from-zinc-200 to-zinc-300 dark:from-zinc-800 dark:to-zinc-700 flex items-center justify-center text-3xl font-bold">유</div>
+          <div class="flex-1">
+            <h1 class="text-2xl md:text-4xl font-bold leading-tight">유쌤 <span class="opacity-70">|</span> IT 교육 전문가 · 풀스택 개발자 · 데이터 분석가</h1>
+            <p class="mt-3 text-sm md:text-base opacity-90">20+년 개발·교육 경험과 일본·필리핀 해외 경력. Java, Python, AI/데이터, AWS/DevOps, IoT까지 실무-교육 전 과정을 설계하고 이끕니다.</p>
+            <div class="mt-5 flex flex-wrap items-center gap-3 text-sm opacity-90">
+              <span class="inline-flex items-center gap-1">📍 대한민국, 서울</span>
+              <span class="inline-flex items-center gap-1">🌐 your-domain.example</span>
+              <span class="inline-flex items-center gap-1">🗣️ 일본어 N1 · 영어 일상회화</span>
+              <span class="inline-flex items-center gap-1">🏅 MBTI INTJ · 혈액형 A형</span>
+            </div>
+            <div class="mt-6 flex flex-wrap gap-3 no-print">
+              <a href="mailto:your.email@example.com" class="px-4 py-2 rounded-xl bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 text-sm inline-flex items-center gap-2">✉️ 이메일 문의</a>
+              <a href="https://github.com/your-id" target="_blank" class="px-4 py-2 rounded-xl border text-sm inline-flex items-center gap-2">🐙 GitHub ↗</a>
+              <a href="https://www.linkedin.com/in/your-id/" target="_blank" class="px-4 py-2 rounded-xl border text-sm inline-flex items-center gap-2">in LinkedIn ↗</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="container max-w-6xl py-16">
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="md:col-span-2">
+        <h2 class="text-xl md:text-2xl font-bold">소개</h2>
+        <p class="mt-3 leading-relaxed opacity-90">소프트웨어 개발과 교육 분야에서 축적된 실무 경험을 바탕으로, 학습자의 수준과 목표에 맞는 실습형 커리큘럼을 설계·운영합니다. 해외 근무·창업 경험을 통해 다양한 문화권과 협업했으며, 복잡한 문제를 구조화하여 해결하는 데 강점을 지니고 있습니다.</p>
+      </div>
+      <div class="p-5 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white/70 dark:bg-zinc-900/60 backdrop-blur">
+        <h3 class="font-semibold">연락처</h3>
+        <div class="mt-3 space-y-2 text-sm">
+          <div>✉️ your.email@example.com</div>
+          <div>📞 +82-10-0000-0000</div>
+          <div>🌐 https://your-domain.example</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="container max-w-6xl py-16">
+    <h2 class="text-xl md:text-2xl font-bold">핵심 역량</h2>
+    <div class="mt-6 grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+      <div class="p-4 rounded-2xl border bg-white/70 dark:bg-zinc-900/60 border-zinc-200 dark:border-zinc-800">💻 Java / Spring Boot</div>
+      <div class="p-4 rounded-2xl border bg-white/70 dark:bg-zinc-900/60 border-zinc-200 dark:border-zinc-800">🧠 Python / AI·Data (TensorFlow, pandas)</div>
+      <div class="p-4 rounded-2xl border bg-white/70 dark:bg-zinc-900/60 border-zinc-200 dark:border-zinc-800">🧩 JavaScript / React</div>
+      <div class="p-4 rounded-2xl border bg-white/70 dark:bg-zinc-900/60 border-zinc-200 dark:border-zinc-800">🗄️ DB (MySQL, Oracle)</div>
+      <div class="p-4 rounded-2xl border bg-white/70 dark:bg-zinc-900/60 border-zinc-200 dark:border-zinc-800">☁️ 클라우드 / DevOps (AWS)</div>
+      <div class="p-4 rounded-2xl border bg-white/70 dark:bg-zinc-900/60 border-zinc-200 dark:border-zinc-800">🔧 IoT (Arduino, Raspberry Pi)</div>
+      <div class="p-4 rounded-2xl border bg-white/70 dark:bg-zinc-900/60 border-zinc-200 dark:border-zinc-800">📊 데이터 시각화</div>
+      <div class="p-4 rounded-2xl border bg-white/70 dark:bg-zinc-900/60 border-zinc-200 dark:border-zinc-800">📚 교육 설계·운영</div>
+      <div class="p-4 rounded-2xl border bg-white/70 dark:bg-zinc-900/60 border-zinc-200 dark:border-zinc-800">🌍 일본어(N1)·영어</div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="container max-w-6xl py-16">
+    <h2 class="text-xl md:text-2xl font-bold">주요 경력</h2>
+    <div class="mt-6 space-y-4">
+      <article class="p-5 rounded-2xl border bg-white/70 dark:bg-zinc-900/60 border-zinc-200 dark:border-zinc-800 card">
+        <div class="flex flex-wrap items-center gap-2 justify-between">
+          <div class="font-semibold">코리아아이티아카데미 · 교육 프리랜서</div>
+          <div class="text-sm opacity-70">2023.12 ~ 현재</div>
+        </div>
+        <ul class="mt-3 list-disc pl-5 text-sm space-y-1">
+          <li>AWS·DevOps 기반 바이오헬스 서비스 개발 과정 강의</li>
+          <li>Kaggle/국가연구데이터셋 기반 데이터 분석·시각화 플랫폼 강의</li>
+          <li>데이터사이언스(AI) 웹서비스 융합, ChatGPT·R·Python·JAVA 기초 강의</li>
+        </ul>
+      </article>
+      <article class="p-5 rounded-2xl border bg-white/70 dark:bg-zinc-900/60 border-zinc-200 dark:border-zinc-800 card">
+        <div class="flex flex-wrap items-center gap-2 justify-between">
+          <div class="font-semibold">효성컴퓨터학원 · 교육 사원 팀장</div>
+          <div class="text-sm opacity-70">2023.03 ~ 2023.10</div>
+        </div>
+        <ul class="mt-3 list-disc pl-5 text-sm space-y-1">
+          <li>C/C++, Java, Python, 아두이노, AI, 데이터분석 강의</li>
+          <li>PC정비사·리눅스마스터·네트워크관리사·AICE 자격 과정</li>
+          <li>마케팅·과정개발·행정 운영</li>
+        </ul>
+      </article>
+      <article class="p-5 rounded-2xl border bg-white/70 dark:bg-zinc-900/60 border-zinc-200 dark:border-zinc-800 card">
+        <div class="flex flex-wrap items-center gap-2 justify-between">
+          <div class="font-semibold">제이에스엘인재개발원 · 교육부 대리</div>
+          <div class="text-sm opacity-70">2018.10 ~ 2022.03</div>
+        </div>
+        <ul class="mt-3 list-disc pl-5 text-sm space-y-1">
+          <li>과정평가형 정보처리산업기사 운영·강의, 일본 취업 특강</li>
+          <li>C/C++, Java, Oracle DB, 라즈베리파이(IoT) 강의</li>
+        </ul>
+      </article>
+      <article class="p-5 rounded-2xl border bg-white/70 dark:bg-zinc-900/60 border-zinc-200 dark:border-zinc-800 card">
+        <div class="flex flex-wrap items-center gap-2 justify-between">
+          <div class="font-semibold">일본 테크에이브 · 개발 과장(팀장)</div>
+          <div class="text-sm opacity-70">2007.07 ~ 2012.05</div>
+        </div>
+        <ul class="mt-3 list-disc pl-5 text-sm space-y-1">
+          <li>NTT DoCoMo DWH, EMOBILE 요금, JR동일본 설비지령 등 대규모 시스템 개발·운영</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="container max-w-6xl py-16">
+    <div class="flex items-center justify-between">
+      <h2 class="text-xl md:text-2xl font-bold">프로젝트</h2>
+      <a href="#" class="text-sm inline-flex items-center gap-1 opacity-80 hover:opacity-100 no-print">전체 보기 ↗</a>
+    </div>
+    <div class="mt-6 grid md:grid-cols-3 gap-5">
+      <div class="p-5 rounded-2xl border bg-white/70 dark:bg-zinc-900/60 border-zinc-200 dark:border-zinc-800 card">
+        <div class="h-32 rounded-xl bg-gradient-to-br from-zinc-200 to-zinc-300 dark:from-zinc-800 dark:to-zinc-700"></div>
+        <h3 class="mt-4 font-semibold">AI·데이터 분석 기반 웹서비스</h3>
+        <p class="mt-2 text-sm opacity-90">Python/TensorFlow·Spring Boot·MySQL·React로 예측·시각화 기능을 제공하는 교육용 샘플 플랫폼.</p>
+        <div class="mt-3 flex flex-wrap gap-2 text-xs opacity-80">
+          <span class="px-2 py-1 rounded-lg border">Python</span>
+          <span class="px-2 py-1 rounded-lg border">TensorFlow</span>
+          <span class="px-2 py-1 rounded-lg border">Spring Boot</span>
+          <span class="px-2 py-1 rounded-lg border">MySQL</span>
+          <span class="px-2 py-1 rounded-lg border">React</span>
+        </div>
+        <a href="#" class="mt-4 inline-flex items-center gap-1 text-sm opacity-90 hover:opacity-100">자세히 보기 ↗</a>
+      </div>
+      <div class="p-5 rounded-2xl border bg-white/70 dark:bg-zinc-900/60 border-zinc-200 dark:border-zinc-800 card">
+        <div class="h-32 rounded-xl bg-gradient-to-br from-zinc-200 to-zinc-300 dark:from-zinc-800 dark:to-zinc-700"></div>
+        <h3 class="mt-4 font-semibold">ChatGPT 활용 실습 커리큘럼</h3>
+        <p class="mt-2 text-sm opacity-90">50대 초보자도 따라오는 맞춤형 실습 커리큘럼과 프린트 키트, PC 기준 수업 구성.</p>
+        <div class="mt-3 flex flex-wrap gap-2 text-xs opacity-80">
+          <span class="px-2 py-1 rounded-lg border">Prompt</span>
+          <span class="px-2 py-1 rounded-lg border">Automation</span>
+          <span class="px-2 py-1 rounded-lg border">Docs</span>
+        </div>
+        <a href="#" class="mt-4 inline-flex items-center gap-1 text-sm opacity-90 hover:opacity-100">자세히 보기 ↗</a>
+      </div>
+      <div class="p-5 rounded-2xl border bg-white/70 dark:bg-zinc-900/60 border-zinc-200 dark:border-zinc-800 card">
+        <div class="h-32 rounded-xl bg-gradient-to-br from-zinc-200 to-zinc-300 dark:from-zinc-800 dark:to-zinc-700"></div>
+        <h3 class="mt-4 font-semibold">바이브 코딩 기반 풀스택 과정</h3>
+        <p class="mt-2 text-sm opacity-90">생성형 AI를 활용한 빠른 구현·검증 중심의 풀스택 프로젝트 템플릿.</p>
+        <div class="mt-3 flex flex-wrap gap-2 text-xs opacity-80">
+          <span class="px-2 py-1 rounded-lg border">Java</span>
+          <span class="px-2 py-1 rounded-lg border">React</span>
+          <span class="px-2 py-1 rounded-lg border">AWS</span>
+        </div>
+        <a href="#" class="mt-4 inline-flex items-center gap-1 text-sm opacity-90 hover:opacity-100">자세히 보기 ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SWOT -->
+  <section id="swot" class="container max-w-6xl py-16">
+    <h2 class="text-xl md:text-2xl font-bold">SWOT 분석</h2>
+    <div class="mt-6 grid md:grid-cols-2 gap-4">
+      <div class="p-5 rounded-2xl border bg-white/70 dark:bg-zinc-900/60 border-zinc-200 dark:border-zinc-800">
+        <h4 class="font-semibold">S · 강점</h4>
+        <ul class="mt-3 list-disc pl-5 text-sm space-y-1">
+          <li>폭넓은 기술 역량(프론트~백엔드~AI~클라우드~IoT)</li>
+          <li>실습 중심의 교육 설계 및 강의</li>
+          <li>해외 근무·창업 및 다국어(일본어·영어)</li>
+          <li>전략적 사고(INTJ)와 시스템 설계 능력</li>
+        </ul>
+      </div>
+      <div class="p-5 rounded-2xl border bg-white/70 dark:bg-zinc-900/60 border-zinc-200 dark:border-zinc-800">
+        <h4 class="font-semibold">W · 약점</h4>
+        <ul class="mt-3 list-disc pl-5 text-sm space-y-1">
+          <li>완벽주의로 인한 의사결정 지연</li>
+          <li>감정 표현의 절제 → 커뮤니케이션 오해</li>
+          <li>개인 브랜딩 보완 필요</li>
+        </ul>
+      </div>
+      <div class="p-5 rounded-2xl border bg-white/70 dark:bg-zinc-900/60 border-zinc-200 dark:border-zinc-800">
+        <h4 class="font-semibold">O · 기회</h4>
+        <ul class="mt-3 list-disc pl-5 text-sm space-y-1">
+          <li>AI·데이터·클라우드 교육 수요 확대</li>
+          <li>해외 협업·프로젝트 기회</li>
+          <li>생성형 AI·XR 기반 신교육 시장</li>
+        </ul>
+      </div>
+      <div class="p-5 rounded-2xl border bg-white/70 dark:bg-zinc-900/60 border-zinc-200 dark:border-zinc-800">
+        <h4 class="font-semibold">T · 위협</h4>
+        <ul class="mt-3 list-disc pl-5 text-sm space-y-1">
+          <li>기술 변화 속도</li>
+          <li>교육 시장 경쟁 심화</li>
+          <li>경기 변동에 따른 예산 영향</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="container max-w-6xl py-16">
+    <div class="p-6 md:p-8 rounded-3xl border bg-white/70 dark:bg-zinc-900/60 border-zinc-200 dark:border-zinc-800">
+      <h2 class="text-xl md:text-2xl font-bold">협업·강의 문의</h2>
+      <p class="mt-2 text-sm opacity-90">강의·자문·프로젝트 협업을 원하시면 아래 연락처로 문의해 주세요.</p>
+      <div class="mt-5 grid sm:grid-cols-2 lg:grid-cols-3 gap-4 text-sm">
+        <a href="mailto:your.email@example.com" class="p-4 rounded-xl border inline-flex items-center gap-2 hover:bg-zinc-50 dark:hover:bg-zinc-800">✉️ your.email@example.com</a>
+        <div class="p-4 rounded-xl border inline-flex items-center gap-2">📞 +82-10-0000-0000</div>
+        <a href="https://github.com/your-id" target="_blank" class="p-4 rounded-xl border inline-flex items-center gap-2 hover:bg-zinc-50 dark:hover:bg-zinc-800">🐙 GitHub</a>
+        <a href="https://www.linkedin.com/in/your-id/" target="_blank" class="p-4 rounded-xl border inline-flex items-center gap-2 hover:bg-zinc-50 dark:hover:bg-zinc-800">in LinkedIn</a>
+        <a href="https://your-domain.example" target="_blank" class="p-4 rounded-xl border inline-flex items-center gap-2 hover:bg-zinc-50 dark:hover:bg-zinc-800">🌐 웹사이트</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-10 text-center text-xs opacity-70">© <span id="year"></span> 유쌤. All rights reserved.</footer>
+
+  <script>
+    // 현재 연도
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // 이력서 파일 연결 (필요 시 실제 경로로 교체)
+    // 예: document.getElementById('resumeLink').href = 'Executive_Summary.pdf';
+  </script>
+</body>
+</html>

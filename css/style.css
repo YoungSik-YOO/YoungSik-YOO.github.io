@@ -1,151 +1,224 @@
-/* Google Font Import */
-@import url('https://fonts.googleapis.com/css2?family=Black+And+White+Picture&family=Dokdo&family=Nanum+Pen+Script&display=swap');
-/* Black And White Picture Font */
-.BnW_Picture{
-    font-family: 'Black And White Picture', sans-serif;
-}
-/* Dokdo Font */
-.Dokdo{
-    font-family: 'Dokdo', cursive;
-}
-/* Nanum Pen Script Font */
-.Nanum{
-    font-family: 'Nanum Pen Script', cursive;
-}
-/* body tag minimum width size */
+
 body {
-    margin:0px;
-    min-width: 960px;
-    align-content:center;
+    margin: 0px;
+    display:flex;
+    flex-direction:column;
 }
-/* header tag define */
-body header{
-    width:100%;
-    height:200px;
-    background-color:#A7D128;
-    position:fixed;
-    top:0px;
-    left:0px;
-    z-index:10;
+.header {
+    height:80px;
+    display:flex;
 }
-/* nav tag define */
-body nav{
-    width:100%;
-    height:64px;
-    font-size:40px;
-    font-family: 'Nanum Pen Script', cursive;
-    text-align:right;
-    color:#FFFADD;
-    background-color:#616F39;
-    position:fixed;
-    left:0px;
-    top:200px;
-    z-index:10;
-}
-.menu{
-    margin-top:8px;
-    margin-bottom:8px;
-    margin-right:32px;
-}
-/* header child img tag define */
-header img{
-    margin:8px;
-    width:auto;
-    height:90%;
-    display:inline-block;
-}
-
-/* body child banner class define */
-body .banner{
-    margin:8px;
-    width:100%;
-    height:auto;
-}
-
-/* title id define */
-#title{
-    margin:8px;
-    height:auto;
-    color:#1B1919;
-    font-size:120px;
-    font-family: 'Dokdo', cursive;
-    position:relative;
-    top:-70px;
-    display:inline-block;
-}
-a{
+.header .title {
+    min-width:261px;
+    margin:0px 10px;
+    padding-left: 10px;
+    color:black;
+    font-weight:bolder;
+    font-size:2.1rem;
     text-decoration:none;
+    align-self:self-end;
 }
-nav a{
-    color:#FFFADD;
+
+.nav {
+    margin: 0px 10px;
+    width:100%;
+    height:auto;
+    align-self:self-end;
 }
-a:hover{
-    color:red;
-}
-/* grid layout define */
-.grid-container{
-    min-width:960px;
-    margin-right: auto;
-    margin-left: auto;
-    display:grid;
-    grid-template-areas:
-    "header header header header"
-    "nav nav nav nav"
-    "left content content right"
-    "footer footer footer footer";
-}
-.header{
+.menu {
     margin:0px;
-    padding-left:8px;
-    padding-right:8px;
-    grid-area:header;
+    padding:0px;
+    display:flex;
+    justify-content:space-evenly;
+    list-style:none;
 }
-.nav{
-    margin:0px;
-    padding-left:0px;
-    padding-right:0px;
-    grid-area:nav;
+.menu li {
+    margin:0px 10px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
 }
-.left{
-    margin:8px;
-    grid-area:left;
-    position:relative;
-    top:264px;
+.menu li:hover {
+    background-color:gray;
 }
-.right{
-    margin:8px;
-    grid-area:right;
-    position:relative;
-    top:264px;
+.menu a {
+    width:90px;
+    height:30px;
+    color:black;
+    text-decoration:none;
+    display:inline-block;
+    text-align:center;
+    align-items:center;
 }
-.content{
-    margin:8px;
-    grid-area:content;
-    position:relative;
-    top:264px;
+.menu a:hover {
+    color:white;
+    font-weight:bolder;
 }
-.footer{
-    margin:0px;
+.main {
+    min-height: 400px;
+    display:flex;
+}
+.aside {
+    width:50px;
+}
+.aside-left {
+    width:50px;
+}
+.aside-right {
+    width:400px;
+}
+#h-num {
+    width:50px;
     background-color: lightgray;
-    padding-top:20px;
-    padding-bottom:20px;
-    grid-area:footer;
-    position:relative;
-    top:280px;
+}
+#h-todo {
+    width:180px;
+    background-color: lightgray;
+}
+#h-check {
+    width:50px;
+    background-color: lightgray;
+}
+.align-center {
+    text-align:center;
+}
+.through-line {
+    color:red;
+    text-decoration:line-through;
+}
+.contents {
+    width:100%;
+    display: flex;
+    flex-direction: column;
+}
+#inputForm {
+    padding:50px;
+    display:none;
+    position:fixed;
+    top:10%;
+    left:50%;
+    transform:translate(-50%);
+    background-color: white;
+    width:500px;
+    height:400px;
+    border:1px solid gray;
+    z-index:100;
+}
+#readForm {
+    padding:50px;
+    display:none;
+    position:fixed;
+    top:10%;
+    left:50%;
+    transform:translate(-50%);
+    background-color: white;
+    width:500px;
+    height:400px;
+    border:1px solid gray;
+    z-index:100;
+}
+.mouse-over:hover {
+    color:blue;
+    text-decoration: underline;
+    cursor:pointer;
+}
+.th-check {
+    width:50px;
+}
+.th-number {
+    width:50px;
+}
+.th-title {
+    width:50px;
+}
+.th-content {
+    width:50px;
+}
+.th-name {
+    width:50px;
+}
+.th-date {
+    width:50px;
 }
 
-.footer img{
-    margin:auto;
-    display:inline-block;
-    vertical-align:middle;
+.footer {
+    height:30px;
+    background-color:grey;
 }
 
-.footer div{
-    margin:auto;
-    padding-left:10%;
+.footer p{
+    margin:0px;
+    color:white;
+    text-align:center;
+}
+
+/* --- Login Page Styles --- */
+
+/* 로그인/회원가입 등 중앙 컨텐츠를 위한 스타일 */
+.contents-center {
+    justify-content: center;
     align-items: center;
-    display:inline-block;
 }
 
+.login-box {
+    width: 400px;
+    padding: 40px;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
 
+.login-box h2 {
+    margin-bottom: 25px;
+    font-size: 24px;
+    color: #333;
+}
 
+.login-box .input-group {
+    margin-bottom: 15px;
+}
+
+.login-box input[type="text"],
+.login-box input[type="email"],
+.login-box input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box; /* 패딩과 테두리를 너비에 포함 */
+}
+
+.btn-login {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background-color: #4a90e2; /* 이미지의 파란색과 유사하게 */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-login:hover {
+    background-color: #357abd;
+}
+
+.login-box .link-group {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #888;
+}
+
+.login-box .link-group a {
+    color: #555;
+    text-decoration: none;
+}
+
+.login-box .link-group a:hover {
+    text-decoration: underline;
+}

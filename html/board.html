@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>자유게시판 - 유쌤의 IT Lab</title>
+        <link rel="stylesheet" href="../css/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="../js/script.js"></script>
+    </head>
+    <body>
+        <div class="header">
+            <a class="title" href="../index.html">&#x1F4BB; 유쌤의 IT Lab</a>
+            <div class="nav">
+                <ul class="menu">
+                    <li><a href="../index.html">홈</a></li>
+                    <li><a href="./login.html">로그인</a></li>
+                    <li><a href="./join.html">회원가입</a></li>
+                    <li><a href="./profile.html">프로필</a></li>
+                    <li><a href="./portfolio.html">포트폴리오</a></li>
+                    <li><a href="./board.html">자유게시판</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="main">
+            <div class="aside"></div>
+            <div class="contents contents-center">
+                <h1>자유게시판</h1>
+                <div id="inputForm">
+                    <h2>글 쓰 기</h2>
+                    <form name="writePost" action="#" method="get">
+                    <table>
+                        <tr>
+                            <th>제목</th><td><input type="text" name="title"></td>
+                        </tr>
+                        <tr>
+                            <th>내용</th><td><input type="text" name="content"></td>
+                        </tr>
+                        <tr>
+                            <th>작성자</th><td><input type="text" name="name"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="align-center">
+                                <input type="button" value="저장" onclick="write_post()">
+                                <input type="button" value="닫기" onclick="closeWrite()">
+                            </td>
+                        </tr>
+                    </table>
+                    </form>
+                </div>
+                <div id="readForm">
+                    <h2>글 읽 기</h2>
+                    <form name="readPost" action="#" method="get">
+                    <table>
+                        <tr>
+                            <th>번호</th><td id="read-no"></td>
+                        </tr>
+                        <tr>
+                            <th>제목</th><td id="read-title"></td>
+                        </tr>
+                        <tr>
+                            <th>내용</th><td id="read-content"></td>
+                        </tr>
+                        <tr>
+                            <th>작성자</th><td id="read-name"></td>
+                        </tr>
+                        <tr>
+                            <th>작성일</th><td id="read-date"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="align-center">
+                                <input type="button" value="수정" id="edit-button" onclick="edit_post()">
+                                <input type="button" value="저장" id="save-button" onclick="save_post()">
+                                <input type="button" value="닫기" onclick="closeRead()">
+                            </td>
+                        </tr>
+                    </table>
+                    </form>
+                </div>
+                <br>
+                <div id="list">
+                    <input type="button" value="글쓰기"><input type="button" value="삭제" onclick="delCheckList()">
+                    <table>
+                        <tr>
+                            <th><input type="checkbox" onclick="allCheck(this)"></th>
+                            <th>번호</th>
+                            <th>제목</th>
+                            <th>내용</th>
+                            <th>작성자</th>
+                            <th>작성일</th>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+            <div class="aside"></div>
+        </div>
+        <div class="footer">
+            <p>Copyright&copy; 유쌤의 IT 연구소(Yoo's IT Lab). All rights reserved.</p>
+        </div>
+    </body>
+</html>
